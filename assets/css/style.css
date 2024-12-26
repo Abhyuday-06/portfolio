@@ -762,7 +762,9 @@ main {
 
  
 
-.clients { margin-bottom: 15px; }
+ .clients {
+  margin-bottom: 15px;
+}
 
 .clients-list {
   display: flex;
@@ -774,20 +776,44 @@ main {
   overflow: hidden; /* Hide horizontal scrollbar */
 }
 
-
 .clients-list div {
   width: 40%;
   display: flex;
-  /* justify-content: center; */
-  align-content: center;
+  flex-direction: row; /* Default: row layout for larger screens */
   align-items: center;
-  /* padding:5px; */
   transition: var(--transition-1);
+  margin-bottom: 15px; /* Add spacing between items */
 }
 
-.clients-list img{
+.clients-list img {
   padding-right: 20px;
-  /* width:100px; */
+  max-width: 80px; /* Restrict image size */
+}
+
+.role {
+  font-size: 14px;
+  color: #bbb; /* Softer color for less emphasis */
+  margin-top: 5px;
+  text-align: left; /* Consistent alignment */
+  line-height: 1.4; /* Improved readability */
+}
+
+@media (max-width: 768px) {
+  .clients-list div {
+    width: 100%; /* Stack items vertically on smaller screens */
+    flex-direction: column; /* Change to column layout */
+    text-align: center;
+  }
+
+  .clients-list img {
+    padding-right: 0; /* Remove side padding for images */
+    margin-bottom: 10px; /* Add spacing below the image */
+    max-width: 100px; /* Adjust image size for smaller screens */
+  }
+
+  .clients-list h6 {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
 }
 
 
@@ -1251,6 +1277,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+
 
 
 
