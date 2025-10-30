@@ -433,6 +433,14 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-link {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+
 .contact-info address { font-style: normal; }
 
 .social-list {
@@ -1912,9 +1920,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { grid-template-columns: 1fr; }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-all;
+    overflow-wrap: break-word;
   }
 
   .contact-info :is(.contact-link, time, address) {
