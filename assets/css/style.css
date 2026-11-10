@@ -610,9 +610,9 @@ main {
 
 .testimonials-item-title { margin-bottom: 7px; }
 
-.education-period {
+.testimonials-item .education-period {
   margin: -2px 0 10px;
-  color: var(--orange-yellow-crayola);
+  color: var(--white-1);
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
 }
